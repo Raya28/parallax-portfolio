@@ -1,0 +1,34 @@
+---
+import LinkInline from "./LinkInline.astro"
+
+interface Props {
+  title: string
+  company: string
+  description: string
+  link?: string
+  date: string
+  relevant?: string
+}
+
+const { title, company, description, link, date, relevant } = Astro.props
+---
+<div
+  id="xp" class="item-center  max-w-fit relative mx-16 md:mx-12 pt-3 pb-12 grid before:absolute before:left-[-33px] before:block before:h-full before:border-l-2 before:border-white/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+>
+  <div class="relative pb-12  md:col-span-2">
+    <div class="text-wrap sticky top-0">
+      <span class="text-yellow-400  -left-[38px] absolute rounded-full text-5xl"
+        >&bull;</span>
+
+      <h2 class="text-3xl font-bold text-yellow-400">{title}</h2>
+      <h4 class="font-bold md:text-left text-2xl text-gray-200 dark:text-white">  {company}</h4>
+      <time class="p-0 m-0 text-sm text-gray-200/80 dark:text-white/100">{date}</time>
+      <!-- <p class="mb-4 text-base font-normal text-pretty"> {description}
+      </p>-->
+    </div>
+  </div>
+ <div class="text-justify relative flex flex-col gap-2 pb-4 text-xl text-white md:col-span-3 justify-center text-pretty">
+    {description}
+    <strong class="text-yellow-400"> {relevant} </strong>
+  </div>
+</div>

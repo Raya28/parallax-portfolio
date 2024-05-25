@@ -1,0 +1,48 @@
+---
+import Briefcase from "./Briefcase.astro"
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Diseñador Gráfico / Diseño y Maquetación Web",
+    company: "Freelance",
+    description:
+      "Análisis, desarrollo y renovación de marcas. Creación de contenidos visuales para redes sociales según los objetivos a corto, mediano y/o largo plazo de mis clientes.",
+    relevant: "Diseño y maquetación web utilizando frameworks como Astro y lenguajes como: HTML5, CSS3, JS, TAILWIND.",
+  },
+  {
+    date: "Junio 2023",
+    title: "Diseñador Gráfico",
+    company: "Agencia Propositive",
+    description:
+      "Desarrollo y creación de contenido para redes sociales, en sintonia con los objetivos a diferentes plazos definidos por las más de 20 cuentas que tuvimos a cargo junto con el equipo",
+  },
+  {
+    date: "Septiembre 2022",
+    title: "Auxiliar de diseño",
+    company: "Grupo Ortiz",
+    description:
+      "Innovación, evaluación y evolución de la marca principal: Grupo Ortiz. Junto con demás marcas internas de la empresa; desarrollo de envases, perfeccionamiento del diseño para un offset preciso y creación de material publicitario.",
+  },
+  {
+    date: "Diciembre 2021",
+    title: "Diseñador Gráfico",
+    company: "KOI Comunicación",
+    description:
+      "Primer contacto en el ámbito laboral dentro de una agencia de publicidad, encargado del desarrollo y creación de contenido para páginas de FB ",
+  },
+]
+---
+
+
+<ol class="relative mt-16 px-2" >
+  <h3 class="text-3xl  text-white font-semibold mb-8 flex gap-x-4 item-center ">
+    <Briefcase class="" /> <strong> Experiencia Laboral </strong></h3>
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
